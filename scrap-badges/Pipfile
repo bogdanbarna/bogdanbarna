@@ -1,0 +1,17 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+scrapy = "*"
+
+[dev-packages]
+pylint = "*"
+bandit = "*"
+radon = "*"
+pre-commit = "*"
+mypy = "*"
+
+[requires]
+python_version = "3.8"

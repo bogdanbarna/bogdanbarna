@@ -1,0 +1,41 @@
+---
+name: Update Credly badges
+
+on:
+  schedule:
+    # At 00:00 on day-of-month 1
+    # Thanks, https://crontab.guru/every-month
+    - cron: "0 0 1 * *"
+  # Manually start workflow, for troubleshooting
+  workflow_dispatch:
+
+jobs:
+  update-readme:
+    name: Update README with Credly badges
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Update README with Credly badges
+        env:
+          BADGE_URL: 'https://www.credly.com/users/bogdan-barna'
+        working-directory: scrap-badges
+        run: |
+          pip install pipenv
+          pipenv install
+          pipenv run python crawl.py
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "readme-bot"
+          git config user.email "readme-bot@noreply.com"
+          git update-index -q --refresh
+          CHANGES="$(git diff-index --name-only HEAD --)"
+          if [[ "$CHANGES" == *"README.md"* ]]; then
+            echo "Committing changes $CHANGES"
+            git add README.md
+            git commit -m 'Update README.md cert badges'
+            git push
+          else
+            echo "No changes"
+          fi
