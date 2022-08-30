@@ -1,0 +1,116 @@
+% LaTeX Resume
+% Shamelessly copied from
+% https://www.overleaf.com/latex/templates/xovees-cv-template/rrsmqwhbygcf
+
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{fontawesome}
+
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage[T1]{fontenc}
+
+% document parameters
+\newcommand\myname{Bogdan Barna}
+\newcommand\myemail{bogdangb@proton.me}
+\newcommand\mygithub{bogdanbarna}
+
+\title{Resume}
+\author{\myname}
+\date{\today}
+
+\setlength{\parindent}{1em}
+\setlength{\parskip}{0.5em}
+\renewcommand{\baselinestretch}{0.75}
+
+\setlist[itemize]{leftmargin=2em}
+\setlength{\itemsep}{0.3em}
+
+\begin{document}
+
+\setlength{\parskip}{2pt}
+
+\begin{center}
+    \vspace*{2pt}
+    \Large{
+    \textbf{\myname}}
+\end{center}
+
+% Contact Information
+\setlength{\parskip}{1pt}
+\noindent Software Engineer \hfill
+\href{mailto:\myemail}{\myemail}
+
+\href{https://github.com/\mygithub}{\hfill \faGithub/\mygithub}
+
+\setlength{\parskip}{0.1em}
+
+\section*{About}
+\indent \par
+Information sponge, interested in building useful things, automating the tedious parts, and
+making painful workflows boring. Always in search of technical challenges and communities of learners.\par
+Open to remote work and relocation.
+
+\section*{Work Experience}
+\indent
+% STAR format — Situation, Task you were assigned, your Actions to accomplish that task, and the Result that you achieved.
+
+\textbf{Senior DevOps Engineer} \hfill Telenav, Cluj, Jun 2022 - present
+\begin{itemize}
+    \item[$-$] Operating the Kubernetes cluster for the data platform team
+    \item[$-$] Part of the SRE team maintaining on-premise development Linux servers, Jenkins workers, and Hadoop nodes
+\end{itemize}
+
+\textbf{Senior Software Engineer} \hfill 3Pillar, Cluj, Jan 2019 - Jun 2022
+
+\begin{itemize}
+    \item[$-$] Planned and built an AWS "account vending machine" (in accordance to the AWS best practices / multi-account framework) for one of our EdTech clients
+    \item[$-$] Mentored, and designed the internal (pilot of the) program for lateral movement towards Ops positions
+\end{itemize}
+
+\textbf{Software Engineer} \hfill 3Pillar, Cluj, Aug 2018 - Jan 2019
+
+\begin{itemize}
+    \item[$-$] Led re-engineering effort of a mission-critical data pipeline, moving away from on-premise legacy systems and scripts to an AWS solution of ECS Fargate for batch compute, S3 for storage, and EventBridge for event busing
+    \item[$-$] Led the containerization of the projects our team developed and maintained, migrating from older generation EC2 instances to ECS EC2, training and guiding the rest of the (cross-functional) team along the way
+    \item[$-$] Facilitated internal DevOps Communities of Practice, where we exchanged ideas, best practices, stories from the trenches, with all kinds of gatherings: tech talks, debates, workshops, capture-the-flag games
+\end{itemize}
+
+\textbf{DevOps Specialist} \hfill Red-to-Blue Solutions, Cluj, Jan 2017 - Aug 2018
+\begin{itemize}
+    \item[$-$] Established our first operational road map, on-call schedule for both operators and developers, collaborating with Product on balancing functional and cross-functional feature work
+    \item[$-$] Added tools and processes to facilitate our road map towards operational excellence: Terraform (Infrastructure-as-Code), StatusCake and CloudWatch (monitoring), PagerDuty (alerting), blameless postmortems, etc
+    \item[$-$] Achieved a 40\% cost optimization on our AWS accounts through enforced tagging
+standards, billing monitoring and alarms
+\end{itemize}
+
+\textbf{DevOps Intern} \hfill Betfair Romania Development, Cluj, Jan 2016 - Jan 2017
+
+\begin{itemize}
+    \item[$-$] Implemented an OpenTSDB agent plugin and integrated the statsd Apache module to monitor HTTP requests over time
+\end{itemize}
+
+
+\section*{Skills and Competencies}
+\indent
+
+\textbf{Certifications}
+
+\hspace{1em}HashiCorp Certified: Terraform Associate, Aug 2021 - Aug 2023
+
+\hspace{1em}AWS Certified DevOps Engineer – Professional, Nov 2019 - Nov 2022
+
+\hspace{1em}Cambridge English: Proficiency, Dec 2013
+
+\hspace{1em}Currently studying for the Certified Kubernetes Administrator
+
+\textbf{Programming languages}
+
+\hspace{1em}Python, JavaScript (light production work), Go (light production work)
+
+\textbf{Tools, frameworks, infrastructure}
+
+\hspace{1em}Docker, Kubernetes (light production work), Terraform, AWS, Linux, Pandas, Flask
+
+\end{document}
