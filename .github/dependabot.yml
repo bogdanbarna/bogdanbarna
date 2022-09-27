@@ -5,7 +5,12 @@
 
 version: 2
 updates:
-  - package-ecosystem: "pip" # See documentation for possible values
+  - package-ecosystem: "pip" # Python Pip / Pipfile / Poetry
     directory: "/scrap-badges" # Location of package manifests
+    schedule:
+      interval: "monthly"
+
+  - package-ecosystem: "github-actions" # GitHub Actions steps
+    directory: "/" # Location of package manifests
     schedule:
       interval: "monthly"
