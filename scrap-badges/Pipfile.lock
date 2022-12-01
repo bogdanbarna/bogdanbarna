@@ -733,11 +733,11 @@
         },
         "pylint": {
             "hashes": [
-                "sha256:3b120505e5af1d06a5ad76b55d8660d44bf0f2fc3c59c2bdd94e39188ee3a4df",
-                "sha256:c2108037eb074334d9e874dc3c783752cc03d0796c88c9a9af282d0f161a1004"
+                "sha256:1d561d1d3e8be9dd880edc685162fbdaa0409c88b9b7400873c0cf345602e326",
+                "sha256:91e4776dbcb4b4d921a3e4b6fec669551107ba11f29d9199154a01622e460a57"
             ],
             "index": "pypi",
-            "version": "==2.15.5"
+            "version": "==2.15.7"
         },
         "pyyaml": {
             "hashes": [
