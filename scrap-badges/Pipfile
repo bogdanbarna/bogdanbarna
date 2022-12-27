@@ -4,14 +4,14 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-scrapy = "*"
+scrapy = "2.7.1"
 
 [dev-packages]
-pylint = "*"
-bandit = "*"
-radon = "*"
-pre-commit = "*"
-mypy = "*"
+pylint = "2.9.6"
+bandit = "1.7.0"
+radon = "5.1.0"
+pre-commit = "2.14.0"
+mypy = "0.910"
 
 [requires]
 python_version = "3.8"
