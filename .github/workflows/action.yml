@@ -19,11 +19,16 @@ jobs:
       - name: Update README with Credly badges
         env:
           BADGE_URL: 'https://www.credly.com/users/bogdan-barna'
-        working-directory: scrap-badges
+          README_PATH: '../README.md'
         run: |
+          # TODO use a GHA workflow
+          git clone https://github.com/bogdanbarna/scrap-badges.git scrap-badges
+          cd scrap-badges
           pip install pipenv
           pipenv install
           pipenv run python crawl.py
+          cd -
+          rm -rf scrap-badges
 
       - name: Commit and push changes
         run: |
